@@ -79,6 +79,7 @@ WORKDIR /
 
 COPY run.sh .
 COPY script.py .
+COPY script2.py .
 COPY china2-model_step_55000.pt .
 
 RUN mkdir -p /opt/results/
