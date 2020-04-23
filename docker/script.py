@@ -1,11 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
 
-#import jieba
-#import json
+inputPath = '/tmp/data/input.txt'
+tokensPath = '/tmp/data/input_tokens.txt'
+#outputPath = '/opt/data/output.txt'
 
-# python /OpenNMT-py/translate.py -model /china2-model_step_55000.pt -src \
-# 	   /tmp/data/input.txt -output /opt/results/output.txt -replace_unk -verbose
+#inputPath = 'D:\\git\\input.txt'
+#tokensPath = 'D:\\git\\input_tokens.txt'
 
-# python /OpenNMT-py/translate.py -model /china2-model_step_55000.pt -src \
-# 	   /tmp/data/input.txt -output /opt/results/output.txt -replace_unk -verbose
+import jieba
+
+with open(inputPath, mode='r', encoding='utf-8') as input, open(tokensPath, mode='w', encoding='utf-8') as tokens:
+	for line in input:
+		t = jieba.lcut(line)
+		tokens.write(' '.join(t))

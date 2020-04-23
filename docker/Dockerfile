@@ -34,43 +34,51 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8 LANG=C.U
 
 # Install dependencies from pip
 
-RUN pip install torch==1.2.0+cpu torchvision==0.4.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install torch==1.2.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 # RUN if [ $py_version -eq 3 ]; \
 #         then pip install --no-cache-dir http://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86_64.whl; \
 #         else pip install --no-cache-dir http://download.pytorch.org/whl/cpu/torch-1.0.0-cp27-cp27mu-linux_x86_64.whl; fi && \
-RUN pip install --no-cache-dir 'opencv-python>=4.0,<4.1' Pillow retrying six
+#RUN pip install --no-cache-dir Pillow retrying six jieba torchvision==0.2.1
 
-# torchvision==0.2.1
+#RUN pip install --no-cache-dir retrying
 
+#torch 1.3.1
+#torchtext 0.5.0
 
-RUN pip install \
-certifi==2018.10.15 \
+RUN pip install --no-cache-dir \
+jieba==0.42.1 \
+certifi==2019.6.16 \
 chardet==3.0.4 \
-ConfigArgParse==0.14.0 \
-future==0.16.0 \
-idna==2.7 \
-nltk==3.4 \
-numpy==1.15.3 \
-requests==2.20.0 \
-sentencepiece==0.1.8 \
-singledispatch==3.4.0.3 \
-six==1.11.0 \
-torchtext==0.3.1 \
-tqdm==4.28.1 \
-ujson==1.35 \
-urllib3==1.24
+ConfigArgParse==1.2.2 \
+future==0.17.1 \
+idna==2.8 \
+nltk==3.4.5 \
+numpy==1.16.4 \
+requests==2.22.0 \
+sentencepiece==0.1.85 \
+#singledispatch==3.4.0.3 \
+six==1.12.0 \
+torchtext==0.5.0 \
+tqdm==4.41.0
+#ujson==1.35 \
+#urllib3==1.24
 
-RUN python -m nltk.downloader punkt
+#RUN python -m nltk.downloader punkt
 
 WORKDIR /
 RUN git clone https://github.com/OpenNMT/OpenNMT-py.git && cd OpenNMT-py 
 WORKDIR /OpenNMT-py
-RUN git checkout 518a19d4fbda6dd90f18a838a9a8986e1a0e6663 && pip install -r requirements.txt && python setup.py install
+
+#RUN git checkout 518a19d4fbda6dd90f18a838a9a8986e1a0e6663 && 
+#RUN pip install -r requirements.txt
+
+RUN python setup.py install
 
 WORKDIR /
 
 COPY run.sh .
+COPY script.py .
 COPY china2-model_step_55000.pt .
 
 RUN mkdir -p /opt/results/
