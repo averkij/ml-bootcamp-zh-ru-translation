@@ -1,1 +1,11 @@
 docker/china2-model_step_55000.pt
+docker/ondatr-model_step_50000.pt
+_/_ondatr-trans_step_20000.pt
+_/_ondatr-trans_step_40000.pt
+_/ondatr-model_step_50000.pt
+_/ondatr-trans_step_20000_32_ted100_0.8.pt
+_/ondatr-trans_step_20000_52_ted_100_0.9.pt
+_/ondatr-trans_step_50000_1.0.pt
+_/ondatr-trans_step_50000_52_ted_100_0.9.pt
+_/ondatr-trans_step_80000_v32_ted144.pt
+docker/ondatr-trans_step_130000_v32_ted144.pt
