@@ -53,12 +53,22 @@ RUN python setup.py install
 WORKDIR /
 
 COPY run.sh .
-COPY src32.code .
-COPY src52.code .
+COPY src.code .
 COPY src32_open.code .
-# COPY script.py .
-# COPY script2.py .
-COPY ondatr-trans_step_150000_v32_open500.pt .
+COPY ondatr-trans_step_160000.pt .
+COPY ondatr-trans_step_200000.pt .
+COPY ondatr-trans_step_220000.pt .
+COPY ondatr-trans_step_240000.pt .
+COPY ondatr-trans_step_260000.pt .
+COPY ondatr-trans_step_280000.pt .
+COPY ondatr-trans_step_300000.pt .
+
+COPY _sent_ru_test_open.txt .
+COPY _sent_zh_test_open.txt .
+COPY sent_ru_test_open.txt .
+COPY sent_zh_test_open.txt .
+COPY sent_ru_test_ted.txt .
+COPY sent_zh_test_ted.txt .
 
 RUN mkdir -p /opt/results/
 
