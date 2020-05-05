@@ -56,9 +56,15 @@ COPY run.sh .
 COPY src32.code .
 COPY src52.code .
 COPY src32_open.code .
-# COPY script.py .
-# COPY script2.py .
-COPY ondatr-trans_step_150000_v32_open500.pt .
+COPY src_26_32.code .
+COPY src_20_32.code .
+COPY src_42_32.code .
+COPY src_open_26_32.code .
+COPY src_ted212_32.code .
+COPY src_ted217_32.code .
+
+COPY apply_bpe.py .
+COPY ondatr-trans_step_100000_ted217_v32_lower.pt .
 
 RUN mkdir -p /opt/results/
 

@@ -27,3 +27,43 @@ BLEU = 2.37, 14.7/4.3/1.5/0.6 (BP=0.863, ratio=0.872, hyp_len=23242, ref_len=266
 BLEU = 2.37, 14.7/4.3/1.5/0.6 (BP=0.863, ratio=0.872, hyp_len=23242, ref_len=26654)
 ### OpenSubtitles 200-300k steps 32k vocab. Скор не растет.
 
+BLEU = 1.96, 13.4/3.6/1.3/0.4 (BP=0.895, ratio=0.900, hyp_len=23989, ref_len=26654)
+BLEU = 2.17, 14.2/3.9/1.3/0.4 (BP=0.936, ratio=0.938, hyp_len=24989, ref_len=26654)
+BLEU = 2.44, 14.7/4.3/1.6/0.5 (BP=0.901, ratio=0.906, hyp_len=24145, ref_len=26654)
+BLEU = 2.40, 15.1/4.5/1.7/0.6 (BP=0.829, ratio=0.842, hyp_len=22446, ref_len=26654)
+BLEU = 2.40, 15.0/4.4/1.7/0.6 (BP=0.855, ratio=0.865, hyp_len=23048, ref_len=26654)
+BLEU = 2.41, 14.9/4.4/1.6/0.6 (BP=0.859, ratio=0.868, hyp_len=23146, ref_len=26654)
+BLEU = 2.44, 14.9/4.4/1.6/0.6 (BP=0.862, ratio=0.871, hyp_len=23210, ref_len=26654)
+BLEU = 2.39, 14.9/4.4/1.6/0.6 (BP=0.865, ratio=0.873, hyp_len=23279, ref_len=26654)
+BLEU = 2.40, 14.9/4.4/1.6/0.6 (BP=0.861, ratio=0.870, hyp_len=23187, ref_len=26654)
+BLEU = 2.40, 14.9/4.3/1.6/0.6 (BP=0.862, ratio=0.871, hyp_len=23217, ref_len=26654)
+### OpenSubtitles 42 32
+
+BLEU = 1.94, 13.1/3.4/1.2/0.4 (BP=0.881, ratio=0.888, hyp_len=23668, ref_len=26654)
+BLEU = 2.38, 14.0/3.8/1.4/0.5 (BP=0.974, ratio=0.974, hyp_len=25970, ref_len=26654)
+BLEU = 2.25, 14.8/4.3/1.6/0.6 (BP=0.811, ratio=0.827, hyp_len=22032, ref_len=26654)
+BLEU = 2.26, 15.2/4.3/1.6/0.5 (BP=0.832, ratio=0.844, hyp_len=22507, ref_len=26654)
+BLEU = 2.37, 15.0/4.3/1.6/0.5 (BP=0.874, ratio=0.882, hyp_len=23499, ref_len=26654)
+BLEU = 2.46, 15.1/4.4/1.7/0.6 (BP=0.845, ratio=0.856, hyp_len=22823, ref_len=26654)
+BLEU = 2.46, 15.0/4.4/1.7/0.6 (BP=0.853, ratio=0.863, hyp_len=23000, ref_len=26654)
+BLEU = 2.45, 15.2/4.4/1.7/0.6 (BP=0.849, ratio=0.859, hyp_len=22894, ref_len=26654)
+BLEU = 2.44, 15.2/4.4/1.7/0.6 (BP=0.844, ratio=0.855, hyp_len=22798, ref_len=26654)
+BLEU = 2.43, 15.1/4.4/1.7/0.6 (BP=0.846, ratio=0.857, hyp_len=22834, ref_len=26654)
+### OpenSubtitles 32 42
+
+BLEU = 0.89, 11.3/1.6/0.3/0.1 (BP=1.000, ratio=1.249, hyp_len=43951, ref_len=35182) 10
+BLEU = 1.74, 15.3/3.2/0.9/0.2 (BP=1.000, ratio=1.104, hyp_len=38826, ref_len=35182) 20
+BLEU = 2.08, 15.5/3.6/1.1/0.3 (BP=1.000, ratio=1.083, hyp_len=38110, ref_len=35182) 30
+BLEU = 2.23, 15.8/3.8/1.2/0.3 (BP=1.000, ratio=1.144, hyp_len=40251, ref_len=35182) 40
+BLEU = 2.29, 16.4/3.9/1.2/0.4 (BP=1.000, ratio=1.152, hyp_len=40529, ref_len=35182) 50
+BLEU = 2.42, 16.4/4.0/1.3/0.4 (BP=1.000, ratio=1.229, hyp_len=43225, ref_len=35182) 60
+BLEU = 2.87, 18.1/4.7/1.5/0.5 (BP=1.000, ratio=1.060, hyp_len=37304, ref_len=35182) 70
+BLEU = 2.81, 17.8/4.6/1.5/0.5 (BP=1.000, ratio=1.065, hyp_len=37453, ref_len=35182) 80
+BLEU = 2.61, 17.2/4.3/1.4/0.4 (BP=1.000, ratio=1.147, hyp_len=40339, ref_len=35182) 90
+BLEU = 2.54, 17.4/4.2/1.3/0.4 (BP=1.000, ratio=1.121, hyp_len=39453, ref_len=35182) 100
+BLEU = 2.62, 17.4/4.3/1.4/0.4 (BP=1.000, ratio=1.125, hyp_len=39595, ref_len=35182) 110
+BLEU = 2.61, 17.3/4.4/1.4/0.4 (BP=1.000, ratio=1.127, hyp_len=39656, ref_len=35182) 120
+###TED 217 Books Валидация на TED
+
+
+BLEU = 0.49, 11.0/1.1/0.2/0.0 (BP=1.000, ratio=1.410, hyp_len=73532, ref_len=52163)

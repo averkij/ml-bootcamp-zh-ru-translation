@@ -55,20 +55,37 @@ WORKDIR /
 COPY run.sh .
 COPY src.code .
 COPY src32_open.code .
-COPY ondatr-trans_step_160000.pt .
-COPY ondatr-trans_step_200000.pt .
-COPY ondatr-trans_step_220000.pt .
-COPY ondatr-trans_step_240000.pt .
-COPY ondatr-trans_step_260000.pt .
-COPY ondatr-trans_step_280000.pt .
-COPY ondatr-trans_step_300000.pt .
+COPY src_ted_212_32-32.code .
+COPY src_ted217_32.code .
 
-COPY _sent_ru_test_open.txt .
-COPY _sent_zh_test_open.txt .
-COPY sent_ru_test_open.txt .
-COPY sent_zh_test_open.txt .
-COPY sent_ru_test_ted.txt .
-COPY sent_zh_test_ted.txt .
+COPY ondatr-trans_step_10000.pt .
+COPY ondatr-trans_step_20000.pt .
+COPY ondatr-trans_step_30000.pt .
+COPY ondatr-trans_step_40000.pt .
+COPY ondatr-trans_step_50000.pt .
+COPY ondatr-trans_step_60000.pt .
+COPY ondatr-trans_step_70000.pt .
+COPY ondatr-trans_step_80000.pt .
+COPY ondatr-trans_step_90000.pt .
+COPY ondatr-trans_step_100000.pt .
+COPY ondatr-trans_step_110000.pt .
+COPY ondatr-trans_step_120000.pt .
+# COPY ondatr-trans_step_130000.pt .
+# COPY ondatr-trans_step_140000.pt .
+# COPY ondatr-trans_step_150000.pt .
+
+# COPY sent_ru_test_open.txt .
+# COPY sent_zh_test_open.txt .
+# COPY sent_ru_test_ted.txt .
+# COPY sent_zh_test_ted.txt .
+
+COPY sent_ru_test.txt .
+COPY sent_zh_test.txt .
+
+COPY book_ru.txt .
+COPY book_zh.txt .
+
+COPY apply_bpe.py .
 
 RUN mkdir -p /opt/results/
 
