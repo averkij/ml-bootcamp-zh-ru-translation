@@ -65,3 +65,7 @@ docker_bleu/ondatr-trans_step_100000.pt
 docker_bleu/ondatr-trans_step_110000.pt
 docker_bleu/ondatr-trans_step_120000.pt
 docker/ondatr-trans_step_100000_ted217_v32_lower.pt
+_/ondatr-trans_step_100000_news250_32.pt
+_/ondatr-trans_step_100000_ted217_v32_clean.pt
+_/ondatr-trans_step_100000_ted217_v32_lower.pt
+_/ondatr-trans_step_180000_news250_32.pt

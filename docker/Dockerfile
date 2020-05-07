@@ -62,9 +62,10 @@ COPY src_42_32.code .
 COPY src_open_26_32.code .
 COPY src_ted212_32.code .
 COPY src_ted217_32.code .
+COPY src_news_32.code .
 
 COPY apply_bpe.py .
-COPY ondatr-trans_step_100000_ted217_v32_lower.pt .
+COPY ondatr-trans_step_180000_news250_32.pt .
 
 RUN mkdir -p /opt/results/
 
