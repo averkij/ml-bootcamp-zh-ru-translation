@@ -27,7 +27,7 @@ RUN cd /tmp && \
 
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8 LANG=C.UTF-8 LC_ALL=C.UTF-8
 
-RUN pip install torch==1.2.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+# RUN pip install torch==1.2.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 RUN pip install --no-cache-dir \
 jieba==0.42.1 \
@@ -54,22 +54,22 @@ WORKDIR /
 
 COPY run.sh .
 COPY src.code .
-COPY src32_open.code .
-COPY src_ted_212_32-32.code .
-COPY src_ted217_32.code .
+# COPY src32_open.code .
+# COPY src_ted_212_32-32.code .
+# COPY src_ted217_32.code .
 
-COPY ondatr-trans_step_10000.pt .
-COPY ondatr-trans_step_20000.pt .
-COPY ondatr-trans_step_30000.pt .
-COPY ondatr-trans_step_40000.pt .
-COPY ondatr-trans_step_50000.pt .
-COPY ondatr-trans_step_60000.pt .
-COPY ondatr-trans_step_70000.pt .
-COPY ondatr-trans_step_80000.pt .
-COPY ondatr-trans_step_90000.pt .
-COPY ondatr-trans_step_100000.pt .
-COPY ondatr-trans_step_110000.pt .
-COPY ondatr-trans_step_120000.pt .
+# COPY ondatr-trans_step_10000.pt .
+# COPY ondatr-trans_step_20000.pt .
+# COPY ondatr-trans_step_30000.pt .
+# COPY ondatr-trans_step_40000.pt .
+# COPY ondatr-trans_step_50000.pt .
+# COPY ondatr-trans_step_60000.pt .
+# COPY ondatr-trans_step_70000.pt .
+# COPY ondatr-news_step_80000.pt .
+# COPY ondatr-news_step_90000.pt .
+# COPY ondatr-news_step_100000.pt .
+# COPY ondatr-news_step_110000.pt .
+COPY ondatr-news_step_100000.pt .
 # COPY ondatr-trans_step_130000.pt .
 # COPY ondatr-trans_step_140000.pt .
 # COPY ondatr-trans_step_150000.pt .
@@ -79,13 +79,14 @@ COPY ondatr-trans_step_120000.pt .
 # COPY sent_ru_test_ted.txt .
 # COPY sent_zh_test_ted.txt .
 
-COPY sent_ru_test.txt .
-COPY sent_zh_test.txt .
+# COPY sent_ru_test.txt .
+# COPY sent_zh_test.txt .
 
-COPY book_ru.txt .
-COPY book_zh.txt .
+COPY books_test_ru.txt .
+COPY books_test_zh.txt .
 
 COPY apply_bpe.py .
+COPY postprocess.py .
 
 RUN mkdir -p /opt/results/
 

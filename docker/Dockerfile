@@ -27,7 +27,7 @@ RUN cd /tmp && \
 
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8 LANG=C.UTF-8 LC_ALL=C.UTF-8
 
-RUN pip install torch==1.2.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install torch==1.4.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 RUN pip install --no-cache-dir \
 jieba==0.42.1 \
@@ -53,19 +53,10 @@ RUN python setup.py install
 WORKDIR /
 
 COPY run.sh .
-COPY src32.code .
-COPY src52.code .
-COPY src32_open.code .
-COPY src_26_32.code .
-COPY src_20_32.code .
-COPY src_42_32.code .
-COPY src_open_26_32.code .
-COPY src_ted212_32.code .
-COPY src_ted217_32.code .
-COPY src_news_32.code .
+COPY src.code .
 
 COPY apply_bpe.py .
-COPY ondatr-trans_step_180000_news250_32.pt .
+COPY ondatr-news_step_20000_aligned_21.pt .
 
 RUN mkdir -p /opt/results/
 

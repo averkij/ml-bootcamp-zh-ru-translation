@@ -316,7 +316,16 @@ if __name__ == '__main__':
 
     bpe = BPE(args.codes, args.separator, vocabulary, args.glossaries)
 
-    pattern = re.compile(r'[a-zA-Z\s]+')
+    #3.9
+    #pattern = re.compile(r'[\(\)\/！？\s]+')
+    #3.7
+    #pattern = re.compile(r'[0-9\s]+')
+    #4
+    pattern = re.compile(r'[\s]+')
+    #4
+    #pattern = re.compile(r'[a-zA-Z\s]+')
+    #2.9
+    #pattern = re.compile(r'[a-zA-Z0-9\(\)\[\]\s\/\-\:！？｡。•＂＃＄％＆＇（）＊＋，－／：；＜＝＞＠［＼］＾＿｀｛｜｝～｟｠｢｣､、〃》「」『』【】〔〕〖〗〘〙〚〛〜〝〞〟〰〾〿–—‘’‛“”„‟…‧﹏.．]+')
     for line in args.input:
         args.output.write(bpe.segment(re.sub(pattern, '', line)).strip())
         args.output.write('\n')
